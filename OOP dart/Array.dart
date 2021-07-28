@@ -1,3 +1,4 @@
+import 'dart:io';
 class Array {
   dynamic get_array;
   Array(List array) {
@@ -75,7 +76,7 @@ class Array {
   }
 }
 
-main() {
+void main() {
   Array arrayObj = Array([100, 45, 6, 7, 6, 69]);
   arrayObj.selectionSort();
   print(arrayObj.get_array);
