@@ -2,16 +2,17 @@ import "dart:io";
 
 class Node {
   dynamic data;
-  dynamic prev = 0;
-  dynamic next = 0;
-  Node(this.data) {}
+  dynamic prev;
+  dynamic next;
+  Node(this.data) {
+  }
 }
 
 class DoubleLL {
   dynamic head;
   DoubleLL() {}
   void add(data) {
-    if (this.head == Null) {
+    if (this.head == null) {
       this.head = Node(data);
     } else {
       this._add(this.head, data);
@@ -23,7 +24,7 @@ class DoubleLL {
   }
 
   void _add(dynamic node, data) {
-    if (node.next == 0) {
+    if (node.next == null) {
       node.next = Node(data);
     } else {
       this._add(node.next, data);
@@ -31,7 +32,7 @@ class DoubleLL {
   }
 
   void _show(dynamic node) {
-    if (node == 0) {
+    if (node == null) {
       print("\n");
     } else {
       stdout.write("${node.data} <--> ");
@@ -42,9 +43,9 @@ class DoubleLL {
 
 main() {
   DoubleLL doubleLL = DoubleLL();
-  Node root = Node("P");
-  doubleLL.head = root;
-  print(doubleLL.head.data);
+  // Node root = Node("P");
+  // doubleLL.head = root;
+  // print(doubleLL.head.data);
   doubleLL.add('L');
   doubleLL.add('M');
   doubleLL.add('L');
