@@ -7,7 +7,8 @@ class Node {
 
 class BStree {
   dynamic root;
-  BStree() {}
+  BStree() {
+  }
   void add(int data) {
     if (this.root == null) {
       this.root = Node(data);
